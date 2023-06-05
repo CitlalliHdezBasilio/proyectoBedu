@@ -11,12 +11,12 @@ h1 {
 }
 
 button{
-    background-color: #025157;
+    background-color: #007f88;
     color: #fff;
 }
 
 body{
-    background-color: #fffbf7;
+    background-color: #f7f9ff;
 }
 
 .header {
@@ -54,6 +54,7 @@ li {
     text-align: center;
     color: #025157;
 }
+
 .menu-item {
     display: inline;
     margin-right: 25px;
@@ -95,4 +96,43 @@ li {
     float: right;
     display: inline;
     width: 15%;
+}
+
+.promo{
+    display: flex;
+    width: 70%;
+    margin: 100px auto;
+    align-items: center;
+}
+
+
+.publish h3{
+    color: #025157;
+}
+.publish form p{
+    color: #025157;
+}
+.publish p{
+    color: #343434;
+}
+
+.publish > form {
+    display: flex;
+}
+.contentVideo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contentVideo img {
+    width: 120px;
+    margin-top: 10px;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fffbf7;
 }
