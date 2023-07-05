@@ -105,7 +105,6 @@ li {
     align-items: center;
 }
 
-
 .publish h3{
     color: #025157;
 }
@@ -135,4 +134,40 @@ li {
     left: 0;
     right: 0;
     background-color: #fffbf7;
+}
+
+.articulos{
+    display: grid;
+    /* grid-template-columns: repeat(2, 200px);
+    grid-template-rows: 250px 300px; */
+    grid-template: repeat(2, 300px) / 250px 300px;
+}
+.con{
+    width: 200px;
+    height: 200px;
+}
+
+.cont1{
+    background-color: #007f88;
+}
+
+.cont2{
+    background-color: #67b54b;
+}
+
+.cont3{
+    background-color:beige;
+}
+
+.cont4{
+    background-color:aqua;
+}
+
+.tarjetas{
+    background-color:#007f88;
+    /* padding: 10px; */
+}
+
+.card-title:hover{
+    color: #007f88;
 }

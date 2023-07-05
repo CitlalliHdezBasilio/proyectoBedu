@@ -1,0 +1,55 @@
+h1{
+    font-size: 60px;
+}
+
+.banner{
+    width: 100%;
+}
+
+.logo{
+    width: 50%;
+}
+
+.encabezados{
+    display: grid;
+    grid-template-columns:  1fr 2fr;
+    align-items: center;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: 250px 300px; */
+}
+
+@media(max-width:500px){
+    h1{
+        font-size: 45px;
+    }
+    h2{
+        font-size: small;
+    }
+    .estatico{
+        text-align: center;
+    }
+    header{
+        display: none;
+    }
+    section{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .logo{
+        width: 80%;
+    }
+    .encabezados{
+        display: grid;
+        grid-template-columns:  1fr;
+        align-items: center;
+    }
+}
+
+@media(max-width:300px){
+    section{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
