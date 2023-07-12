@@ -59,6 +59,9 @@ var numerosPrimos = [];
     }
   }
 
+  ///////revisar//////
+  deepEqual({ firstName: 'John', lastName: 'Doe' } , { firstName: 'John', lastName: 'Doe' });
+
   function deepEqual(a, b){
     //console.log(a, typeof(a), b, typeof(b));
     if(typeof(a) == 'object' && typeof(b) == 'object'){
@@ -76,5 +79,32 @@ var numerosPrimos = [];
     }
     return false;
   }
+  
+  function chunk(array, tamaño) {
+    let areglo2 = [];
 
-  deepEqual({ firstName: 'John', lastName: 'Doe' } , { firstName: 'John', lastName: 'Doe' });
+    for (let i = 0; i < array.length; i ++) {
+      let arreglo = array.slice(i, i + tamaño);
+      areglo2.push(arreglo);
+    }
+  }
+  const data = [1, 2, 3, 4, 5, 6, 7, 8];
+  chunk(data, 1);
+  chunk(data, 3);
+
+
+  //sesion 6
+
+const Vec = function(x, y) {
+  this.x = x;
+  this.y = y;
+}
+
+//no funciona
+Vec.prototype.x = function plus(obj) { console.log("x: ", (this.x + obj[0]) ) };
+
+const vec1 = new Vec(1, 2);
+const vec2 = new Vec(2, 3);
+console.log(vec1.plus(vec2)); // Vec { x: 3, y: 5 }
+console.log(vec1.minus(vec2)); // Vec { x: -1, y: -1 }
+console.log(vec1.length()); // 2.23606797749979
