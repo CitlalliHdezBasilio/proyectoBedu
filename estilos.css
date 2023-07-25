@@ -169,7 +169,7 @@ li {
 }
 
 .card-title:hover{
-    color: #007f88;
+    color: #237F88;
 }
 /* Aqui van los estilos que copiamos de las otras páginas que funcionan */
 
@@ -212,3 +212,6 @@ li {
     }
   }
   
+.inputBuscador{
+    margin-top: 20px;
+}
