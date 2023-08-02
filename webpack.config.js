@@ -14,6 +14,20 @@ module.exports = {
     })
   ],
   devServer: {   
-    contentBase: path.resolve(__dirname, 'dist')
-  }
+    static: './dist'
+    //contentBase: path.resolve(__dirname, 'dist')
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.js$/, 
+        exclude: /node_modules/,
+        loader: "babel-loader",
+      },
+    ],
+  },
 }
