@@ -20,39 +20,53 @@
           <div class="d-flex align-items-center p-3  ">
             <div class="input-group mb-3">
               <input type="text" id="receta" class="form-control" placeholder="Nombre de la receta" aria-label="Nombre de la receta" aria-describedby="button-addon2">
-              <button class="btn btn-outline-primary2" type="button" id="button-addon2" title="Buscar" onclick="buscarReceta()"><i class="bi-search" style="font-size: 1.5rem;"></i></button>
+              <button class="btn btn-outline-primary2" type="button" id="button-addon2" title="Buscar" onclick="buscarReceta(0)"><i class="bi-search" style="font-size: 1.5rem;"></i></button>
             </div>
           </div>
         </div>
         <div class="col-12">
-          <button class="btn btn-outline-primary2" type="button" id="button-addon" title="Clic para buscar una receta aleatoria" onclick="buscarAleatoria()"><i class="bi-search-heart" style="font-size: 1.2rem;"> </i> Ver receta aleatoria</button>
+          <button class="btn btn-outline-primary2" type="button" id="button-addon" title="Clic para buscar una receta aleatoria" onclick="buscarReceta(1)"><i class="bi-search-heart" style="font-size: 1.2rem;"> </i> Ver receta aleatoria</button>
         </div>
       </div>
     
       <div class="row justify-content-around" id="divImagenes">  </div>
 
     </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+    <div class="modal fade modal-xl" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable ">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5">Modal title</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p class="card-text">Descripcion corta de la receta... (si la hay).</p>
+            <div class="row">
+              <div class="col-md-6">
+                <img alt="receta" id="imagenReceta" class="img-fluid">
+              </div>
+              <div class="col-md-6">
+                <h5>Ingredientes</h5>
+                <ul id="ingredientes">
+                </ul>
+              </div>
+            </div>
+
             <br><hr><br>
-            <h5>Ingredientes</h5>
-              <ul>
-                <li>ing 1 sfafasfbdfbdfb</li>
-                <li>ing 1 dfdfg dgs </li>
-                <li>ing 1</li>
-                <li>ing 1</li>
-                <li>ing 1</li>
-              </ul>
-            <br><hr><br>
-            <h5>Procedimiento</h5>
-              <p>Placeholder content for this accordion, which is intended to demo This is the first item's</p>
+
+            <div class="row">
+              <div class="col-12">
+                <h5>Procedimiento</h5>
+                <p id="procedimiento"> </p>
+              </div>
+            </div>
+
+            <div id="divVideo" style="display: none;">
+              <br><hr><br>
+              <iframe id="video1" type="video/webm"> </iframe>
+            </div>
+            
+              
+    
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
