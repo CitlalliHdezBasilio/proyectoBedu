@@ -12,14 +12,16 @@ function getImages() {  //lee los elementos del repositorio
     })
     .then(function (data) {     //devuelve sólo los primeros 4 registros
         let entero = getRandomInt(97);
-        return data.slice(entero, (entero+3))
+        console.log(entero, Number(entero+4));
+        return data.slice(entero, Number(entero+4));
     })
 }
 
 getImages()
 .then(function (data) {
+    console.log(data);
     data.forEach(function (data) {
-      //console.log(data);
+      //console.log(data, "---");
       card(data);
     })
 })
@@ -56,12 +58,12 @@ function getRepos(url){
     getRepos1(url)
     .then(function (data) {
         data.forEach(function (data) {
-          console.log(data);
+          //console.log(data);
           let html = document.createElement('a');
           html.setAttribute("href","aqui va el enlace del repo.........");
           html.textContent = "aqui va el nombre del repo........";
           let div = document.getElementsByName('accordion-body');
-          div.appendChild(html);
+          //div.appendChild(html);
         })
     })
 
